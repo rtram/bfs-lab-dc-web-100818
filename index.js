@@ -13,18 +13,25 @@ function bfs(rootNode, vertices, edges){
   return order
 }
 
-function findAdjacent(nodeName,  vertices, edges){
-  return edges.filter(function(edge){
-    return edge.includes(nodeName)
-  }).map(function(edge){
-    return edge.filter(function(node){
-      return (node != nodeName)
-    })[0]
-  }).map(function(name){
-    return findNode(name, vertices)
-  }).filter(function(node){
-    return node.distance == null;
+function findAdjacent(node, vertices, edges) {
+  let adjacentEdges = []
+  for (let element of edges) {
+    if (element.includes(node)) {
+      adjacentEdges.push(element)
+    }
+  }
+  let adjacentNodes= []
+  adjacentEdges.forEach(subArray => {
+    let vertex = subArray.find(vertex => (
+      vertex !== node
+    ))
+    for (let node of vertices) {
+      if (node.name === vertex && node.predecessor === null) {
+        adjacentNodes.push(node)
+      }
+    }
   })
+  return adjacentNodes
 }
 
 function markDistanceAndPredecessor(node, adjacentNodes) {
@@ -32,10 +39,4 @@ function markDistanceAndPredecessor(node, adjacentNodes) {
     element.distance = node.distance + 1
     element.predecessor = node
   }
-}
-
-function findNode(nodeName, vertices){
-  return vertices.find(function(vertex){
-    return vertex.name == nodeName
-  })
 }
