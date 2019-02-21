@@ -1,6 +1,6 @@
 function bfs(rootNode, vertices, edges){
   rootNode.distance = 0
-  let order = []
+  let order = [rootNode]
   let queue = [rootNode]
   
   while (queue.length > 0) {
