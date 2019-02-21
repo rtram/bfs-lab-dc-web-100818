@@ -8,7 +8,7 @@ function bfs(rootNode, vertices, edges){
     markDistanceAndPredecessor(firstNode, adjacentVertices)
     console.log(queue)
     console.log(queue.concat(adjacentVertices).length)
-    console.log('queue', queue)
+    console.log('queue', queue.length)
     // order.push(adjacentVertices)
   }
   // return order
