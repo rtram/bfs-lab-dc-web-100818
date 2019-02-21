@@ -8,7 +8,7 @@ function bfs(rootNode, vertices, edges){
     console.log(adjacentVertices)
     markDistanceAndPredecessor(firstNode, adjacentVertices)
     if (adjacentVertices.length > 0) {
-      queue.push(adjacentVertices) 
+      queue.concat(adjacentVertices) 
     }
     console.log(adjacentVertices)
     console.log('queue', queue)
