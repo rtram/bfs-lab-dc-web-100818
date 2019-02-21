@@ -1,4 +1,5 @@
 function bfs(rootNode, vertices, edges){
+  rootNode.distance = 0
   let order = []
   let queue = [rootNode]
   
