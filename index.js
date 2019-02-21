@@ -1,5 +1,5 @@
 function bfs(rootNode, vertices, edges){
-  let order = [rootNode]
+  let order = []
   let queue = [rootNode]
   
   while (queue.length > 0) {
@@ -8,7 +8,7 @@ function bfs(rootNode, vertices, edges){
     markDistanceAndPredecessor(firstNode, adjacentVertices)
 
     queue = queue.concat(adjacentVertices)
-    order = order.push(firstNode)
+    order.push(firstNode)
   }
   return order
 }
