@@ -11,7 +11,7 @@ function bfs(rootNode, vertices, edges){
       queue.push(adjacentVertices) 
     }
     console.log(adjacentVertices)
-    console.log(queue)
+    console.log('queue', queue)
     // order.push(adjacentVertices)
   }
   // return order
