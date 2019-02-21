@@ -18,7 +18,6 @@ function bfs(rootNode, vertices, edges){
 }
 
 function findAdjacent(node, vertices, edges) {
-  console.log('findAdjacent called' , node)
   let adjacentEdges = []
   for (let element of edges) {
     if (element.includes(node)) {
