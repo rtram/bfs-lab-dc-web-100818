@@ -33,6 +33,7 @@ function findAdjacent(node, vertices, edges) {
       }
     }
   })
+  console.log(ad)
   return adjacentNodes
 }
 
