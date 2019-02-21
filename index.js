@@ -10,6 +10,7 @@ function bfs(rootNode, vertices, edges){
     if (adjacentVertices.length > 0) {
       queue.push(adjacentVertices) 
     }
+    console.log(adjacentVertices)
     // order.push(adjacentVertices)
   }
   // return order
