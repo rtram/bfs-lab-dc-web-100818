@@ -9,7 +9,7 @@ function bfs(rootNode, vertices, edges){
     console.log('firstNode', firstNode.name)
     // console.log('adjacentVertices', adjacentVertices)
     queue = queue.concat(adjacentVertices)
-    order.push(firstNode)
+    order = order.concat(adjacentVertices)
   }
   return order
 }
