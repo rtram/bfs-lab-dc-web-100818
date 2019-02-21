@@ -8,7 +8,7 @@ function bfs(rootNode, vertices, edges){
     markDistanceAndPredecessor(firstNode, adjacentVertices)
 
     queue = queue.concat(adjacentVertices)
-    order = order.concat(adjacentVertices)
+    order = order.push(firstNode)
   }
   return order
 }
