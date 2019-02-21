@@ -27,7 +27,7 @@ function findAdjacent(node, vertices, edges) {
       vertex !== node
     ))
     for (let node of vertices) {
-      if (node.name === vertex && node.distance === null) {
+      if (node.name === vertex && node.predecessor === null) {
         adjacentNodes.push(node)
       }
     }
