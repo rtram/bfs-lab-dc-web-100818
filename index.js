@@ -6,7 +6,7 @@ function bfs(rootNode, vertices, edges){
     let firstNode = queue.shift()
     let adjacentVertices = findAdjacent(firstNode.name, vertices, edges)
     markDistanceAndPredecessor(firstNode, adjacentVertices)
-
+    console.log(adjacentVertices)
     queue = queue.concat(adjacentVertices)
     order.push(firstNode)
   }
