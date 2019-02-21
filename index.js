@@ -4,7 +4,7 @@ function bfs(rootNode, vertices, edges){
   
   while (queue.length > 0) {
     let firstNode = queue.shift()
-    console.log(firstNode)
+    console.log(firstNode, vertices, edges)
     let adjacentVertices = findAdjacent(firstNode, vertices, edges)
     markDistanceAndPredecessor(firstNode, adjacentVertices)
     console.log(findAdjacent(firstNode, vertices, edges))
