@@ -7,7 +7,7 @@ beforeEach(function() {
 	edges = [
 		['14th&6th', '23rd&6th'],
 		['23rd&6th', '34th&6th'],
-		['34th&6th', '28th&Bwy'],
+		['34th&6th', '28th&Bwy'],              
 		['28th&Bwy', '23rd&Bwy'],
 		['23rd&Bwy', '14th&Lex'],
 		['14th&Lex', '23rd&Lex']
@@ -50,7 +50,7 @@ describe('#markDistanceAndPredecessor', function() {
     let twentyEighthAndBroadway = vertices[4]
     let thirtyFourthAndSixth = vertices[0]
     let adjacentNodes = [twentyThirdAndSixth, twentyEighthAndBroadway]
-
+    
     markDistanceAndPredecessor(thirtyFourthAndSixth, adjacentNodes)
 
     expect(twentyThirdAndSixth.distance).toEqual(1)
